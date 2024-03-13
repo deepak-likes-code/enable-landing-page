@@ -22,7 +22,7 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faXTwitter} className="text-white" />
+          <FontAwesomeIcon icon={faXTwitter} className="text-white" size="sm" />
         </a>
       </div>
     </nav>
