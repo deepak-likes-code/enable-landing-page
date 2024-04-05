@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import ParagraphWriter from "@/components/ParagraphWriter";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   const roles = ["designer", "artist", "researcher", "writer"];
@@ -22,6 +23,9 @@ export default function Home() {
         <h1 className="text-6xl font-bold">Enable</h1>
         <div className="mt-3 text-xl">
           <ParagraphWriter htmlContent={html} />
+        </div>
+        <div className="">
+          <ContactForm />
         </div>
       </main>
       <Footer />
