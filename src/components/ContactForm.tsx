@@ -1,5 +1,4 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-
 // Define a type for the form state
 type FormState = {
   name: string;
@@ -8,6 +7,8 @@ type FormState = {
 };
 
 const ContactForm = () => {
+  const [submitted, setSubmitted] = useState<boolean>(false);
+
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
@@ -40,6 +41,7 @@ const ContactForm = () => {
         // Handle success response
         alert("Details submitted successfully.");
         setForm({ name: "", email: "", feedback: "" }); // Optionally reset the form
+        setSubmitted(true);
       } else {
         // Handle non-successful responses
         throw new Error("Failed to submit form");
@@ -105,8 +107,11 @@ const ContactForm = () => {
       </div>
       <div className="flex justify-center mt-6">
         <button
-          className="shadow bg-pink-500 hover:bg-pink-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          className={`shadow bg-pink-500 hover:bg-pink-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ${
+            submitted ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           type="submit"
+          disabled={submitted}
         >
           Send Message
         </button>

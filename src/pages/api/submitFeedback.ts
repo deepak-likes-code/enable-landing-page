@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Ensure the environment variables are correctly typed
     const serviceAccountEmail: string | undefined = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
     const privateKey: string | undefined = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'); // Handling possible newline escape issue
-    const sheetId: string | undefined = process.env.NEXT_PUBLIC_SHEET_ID;
+    const sheetId: string | undefined = process.env.SHEET_ID;
 
     // Initialize the JWT client for Google authentication
     const serviceAccountAuth = new JWT({
