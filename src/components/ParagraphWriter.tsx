@@ -25,7 +25,7 @@ const Typewriter: FC<TypewriterProps> = ({ htmlContent }) => {
 
   return (
     <div
-      className="typewriter-effect"
+      className="typewriter-effect "
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );

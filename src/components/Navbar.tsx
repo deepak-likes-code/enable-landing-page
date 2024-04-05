@@ -5,16 +5,14 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between p-4">
-      <div className="font-[Calligraffitti] text-lg font-bold">enable.ai</div>
-      <div>
+      <div className="font-[Calligraffitti] text-lg font-bold">
         <Link href="/" className="p-2">
-          Home
+          Enable.ai
         </Link>
-        <Link href="/about" className="p-2">
-          About
-        </Link>
-        <Link href="/vision" className="p-2">
-          Vision
+      </div>
+      <div>
+        <Link href="/story" className="p-2">
+          Story
         </Link>
         <a
           href="https://twitter.com/Enable_AI"
